@@ -33,6 +33,17 @@
     margin-top: 3rem;
   }
 
+  .menu button{
+    transform: translateX(70%);
+  }
+
+  .navbar__button span i{
+    color: rgba(246, 246, 246, 1);
+    font-size: 2rem;
+    margin: 0 auto;
+    transform: translateX(-200%);
+  }
+
   .intro__control {
     visibility: hidden;
   }
@@ -41,6 +52,14 @@
 @media screen and (max-width: 576px) {
   * {
     font-size: 2.25vw;
+  }
+
+  .menu button{
+    transform: translateX(0%);
+  }
+
+  .navbar__button span i{
+    transform: translateX(0%);
   }
 }
 
@@ -921,8 +940,13 @@ header {
   width: 100%;
 }
 
+/* -
+-
+-
+-
+- */
 
-/* BACK TO TOP */
+/* Back to top */
 
 .backtotop {
   display: block;
