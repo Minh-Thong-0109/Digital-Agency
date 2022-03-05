@@ -23,6 +23,9 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -40,11 +43,6 @@
         <nav class="menu navbar navbar-expand-md">
             <!-- Logo -->
             <a class="logo navbar-brand" href="#"><img src="./Img/logo.png"></a>
-
-            <!-- Toggler/collapsibe Button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
             <!-- Menu options -->
             <div class="menu collapse navbar-collapse" id="collapsibleNavbar">
@@ -118,19 +116,24 @@
                 </ul>
             </div>
             <button class="button__style__1">Buy now</button>
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar__button navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"><i class="fas fa-list"></i></span>
+            </button>
         </nav>
     </header>
 
     <!-- Carousel -->
     <section id="carousel">
-        <div class="intro carousel slide" data-ride="carousel">
+        <div id="carousel-container" class="intro carousel slide" data-ride="carousel">
 
             <!-- Indicators -->
             <ul class="intro__indicators carousel-indicators">
-                <li data-target="#demo" data-slide-to="0" class="active"></li>
-                <li data-target="#demo" data-slide-to="1"></li>
-                <li data-target="#demo" data-slide-to="2"></li>
-                <li data-target="#demo" data-slide-to="3"></li>
+                <li data-target="#carousel-container" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-container" data-slide-to="1"></li>
+                <li data-target="#carousel-container" data-slide-to="2"></li>
+                <li data-target="#carousel-container" data-slide-to="3"></li>
             </ul>
 
             <!-- The slideshow -->
@@ -174,10 +177,12 @@
             </div>
 
             <!-- Left and right controls -->
-            <a class="intro__control intro__control__right carousel-control-prev" href="#demo" data-slide="prev">
+            <a class="intro__control intro__control__right carousel-control-prev" href="#carousel-container"
+                data-slide="prev">
                 <i class="fas fa-arrow-left"></i>
             </a>
-            <a class="intro__control intro__control__left carousel-control-next" href="#demo" data-slide="next">
+            <a class="intro__control intro__control__left carousel-control-next" href="#carousel-container"
+                data-slide="next">
                 <i class="fas fa-arrow-right"></i>
             </a>
 
@@ -339,12 +344,366 @@
         <div class="button__style__2">View Projects</div>
     </section>
 
+    <!-- About -->
+    <section id="about" class="row">
+        <div class="about__img col-md-5 col-12">
+            <img src="./Img/about-3.jpg" alt="">
+        </div>
+        <div class="about__content col-md-7 col-12">
+            <div class="about__title">
+                <h3 class="title__h3__style">Our company about</h3>
+                <h1 class="title__h1__style">About</h1>
+                <p>There are many variations of passages of Lorem Ipsum available, but the
+                    majority have suffered alteration in some form, by injected humour, or randomised words which dont
+                    look even slightly believable. If you are going to use a passage of Lorem Ipsum,</p>
+            </div>
+            <div class="about__section">
+                <!-- Nav tabs -->
+                <ul class="nav nav__tabs">
+                    <li class="nav__item nav-item">
+                        <a class="nav__link nav-link active" data-toggle="tab" href="#history">Our History</a>
+                    </li>
+                    <li class="nav__item nav-item">
+                        <a class="nav__link nav-link" data-toggle="tab" href="#mission">Our Mission</a>
+                    </li>
+                    <li class="nav__item nav-item">
+                        <a class="nav__link nav-link" data-toggle="tab" href="#vision">Our Vision</a>
+                    </li>
+                    <li class="nav__item nav-item">
+                        <a class="nav__link nav-link" data-toggle="tab" href="#support">Support</a>
+                    </li>
+                </ul>
 
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab__pane tab-pane container active" id="history">
+                        <p><i class="fas fa-check"></i><span>The Philosophy Of business analytics</span></p>
+                        <p><i class="fas fa-check"></i><span>Fast-Track Your business</span></p>
+                        <p><i class="fas fa-check"></i><span>Lies And Damn Lies About business</span></p>
+                        <p><i class="fas fa-check"></i><span>The Ultimate Deal On business</span></p>
+                        </span>
+                    </div>
+                    <div class="tab__pane tab-pane container fade" id="mission">
+                        <p>Fatima ipsum dolor sit amet consectetur
+                            adipisicing elit. Neque ab aliquid, atque enim, vero nobis quam beatae nesciunt aliquam
+                            molestias, optio hic laborum esse. Deserunt architecto officiis laudantium corporis
+                            voluptatem.
+                            <br><br>
+                            Jannin ipsum dolor sit amet consectetur adipisicing elit. Neque ab aliquid, atque enim, vero
+                            nobis quam beatae nesciunt aliquam molestias, optio hic laborum esse. Deserunt architecto
+                            officiis laudantium corporis voluptatem.
+                        </p>
+                    </div>
+                    <div class="tab__pane tab-pane container fade" id="vision">
+                        <p>John ipsum dolor sit amet consectetur adipisicing
+                            elit. Neque ab aliquid, atque enim, vero nobis quam beatae nesciunt aliquam molestias, optio
+                            hic
+                            laborum esse. Deserunt architecto officiis laudantium corporis voluptatem.
+                            <br><br>
+                            Jane ipsum dolor sit amet consectetur adipisicing elit. Neque ab aliquid, atque enim, vero
+                            nobis
+                            quam beatae nesciunt aliquam molestias, optio hic laborum esse. Deserunt architecto officiis
+                            laudantium corporis voluptatem.
+                        </p>
+                    </div>
+                    <div class="tab__pane tab-pane container fade" id="support">
+                        <p>John ipsum dolor sit amet consectetur adipisicing
+                            elit. Neque ab aliquid, atque enim, vero nobis quam beatae nesciunt aliquam molestias, optio
+                            hic
+                            laborum esse. Deserunt architecto officiis laudantium corporis voluptatem.
+                            <br><br>
+                            Jane ipsum dolor sit amet consectetur adipisicing elit. Neque ab aliquid, atque enim, vero
+                            nobis
+                            quam beatae nesciunt aliquam molestias, optio hic laborum esse. Deserunt architecto officiis
+                            laudantium corporis voluptatem.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Intro -->
+    <section id="intro" class="row">
+        <!-- Intro tabs -->
+        <ul class="nav intro__tabs intro__img row col-md-6 col-12">
+            <li class=" intro__item nav-item intro__img__frame col-sm-4 col-6">
+                <img class="intro__link active" data-toggle="tab" href="#pic-1" src="./Img/testimonial-1.jpg">
+            </li>
+            <li class=" intro__item nav-item intro__img__frame col-sm-4 col-6">
+                <img class="intro__link" data-toggle="tab" href="#pic-2" src="./Img/testimonial-2.jpg">
+            </li>
+            <li class=" intro__item nav-item intro__img__frame col-sm-4 col-6">
+                <img class="intro__link" data-toggle="tab" href="#pic-3" src="./Img/testimonial-3.jpg">
+            </li>
+            <li class=" intro__item nav-item intro__img__frame col-sm-4 col-6">
+                <img class="intro__link" data-toggle="tab" href="#pic-4" src="./Img/testimonial-4.jpg">
+            </li>
+            <li class=" intro__item nav-item intro__img__frame col-sm-4 col-6">
+                <img class="intro__link" data-toggle="tab" href="#pic-5" src="./Img/testimonial-5.jpg">
+            </li>
+            <li class=" intro__item nav-item intro__img__frame col-sm-4 col-6">
+                <img class="intro__link" data-toggle="tab" href="#pic-6" src="./Img/testimonial-6.jpg">
+            </li>
+            <li class=" intro__item nav-item intro__img__frame col-sm-4 col-6">
+                <img class="intro__link" data-toggle="tab" href="#pic-7" src="./Img/testimonial-7.jpg">
+            </li>
+            <li class=" intro__item nav-item intro__img__frame col-sm-4 col-6">
+                <img class="intro__link" data-toggle="tab" href="#pic-8" src="./Img/testimonial-8.jpg">
+            </li>
+        </ul>
+        <!-- Intro Tab panes -->
+        <div class="intro__tab__content tab-content column col-md-6 col-12">
+            <div class="intro__tab__content__bg">
+                <img src="/Img/image-1.png" alt="">
+            </div>
+            <div class="intro__tab__pane tab-pane container active" id="pic-1">
+                <div class="intro__tab__pane__above">
+                    <p>Afifa Sampa The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
+                        interested. Sections Bonorum et Malorum original.</p>
+                </div>
+                <div class="intro__tab__pane__under">
+                    <span>AFIFA SAMPA</span>
+                    <span> - COO, AMERIMAR ENTERPRISES, INC.</span>
+                </div>
+            </div>
+            <div class="intro__tab__pane tab-pane container" id="pic-2">
+                <div class="intro__tab__pane__above">
+                    <p>John The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
+                        interested. Sections Bonorum et Malorum original.</p>
+                </div>
+                <div class="intro__tab__pane__under">
+                    <span>JOHN NIRA</span>
+                    <span> - COO, AMERIMAR ENTERPRISES, INC.</span>
+                </div>
+            </div>
+            <div class="intro__tab__pane tab-pane container" id="pic-3">
+                <div class="intro__tab__pane__above">
+                    <p>John Sampa The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
+                        interested. Sections Bonorum et Malorum original.</p>
+                </div>
+                <div class="intro__tab__pane__under">
+                    <span>JONE JANE</span>
+                    <span> - COO, AMERIMAR ENTERPRISES, INC.</span>
+                </div>
+            </div>
+            <div class="intro__tab__pane tab-pane container" id="pic-4">
+                <div class="intro__tab__pane__above">
+                    <p>Janen Sampa The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
+                        interested. Sections Bonorum et Malorum original.</p>
+                </div>
+                <div class="intro__tab__pane__under">
+                    <span>JANEN ASRAFY</span>
+                    <span> - COO, AMERIMAR ENTERPRISES, INC.</span>
+                </div>
+            </div>
+            <div class="intro__tab__pane tab-pane container" id="pic-5">
+                <div class="intro__tab__pane__above">
+                    <p>Afrin Sampa The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
+                        interested. Sections Bonorum et Malorum original.</p>
+                </div>
+                <div class="intro__tab__pane__under">
+                    <span>FATIMA ASRAFY</span>
+                    <span> - COO, AMERIMAR ENTERPRISES, INC.</span>
+                </div>
+            </div>
+            <div class="intro__tab__pane tab-pane container" id="pic-6">
+                <div class="intro__tab__pane__above">
+                    <p>Irin Sampa The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
+                        interested. Sections Bonorum et Malorum original.</p>
+                </div>
+                <div class="intro__tab__pane__under">
+                    <span>IRIN ASRAFY</span>
+                    <span> - COO, AMERIMAR ENTERPRISES, INC.</span>
+                </div>
+            </div>
+            <div class="intro__tab__pane tab-pane container" id="pic-7">
+                <div class="intro__tab__pane__above">
+                    <p>Mohima Sampa The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
+                        interested. Sections Bonorum et Malorum original.</p>
+                </div>
+                <div class="intro__tab__pane__under">
+                    <span>MOHIMA ASRAFY</span>
+                    <span> - COO, AMERIMAR ENTERPRISES, INC.</span>
+                </div>
+            </div>
+            <div class="intro__tab__pane tab-pane container" id="pic-8">
+                <div class="intro__tab__pane__above">
+                    <p>Shipa Sampa The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
+                        interested. Sections Bonorum et Malorum original.</p>
+                </div>
+                <div class="intro__tab__pane__under">
+                    <span>SHIPA</span>
+                    <span> - COO, AMERIMAR ENTERPRISES, INC.</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- News -->
+    <section id="news">
+        <div class="news__title">
+            <h3 class="title__h3__style">Latest post</h3>
+            <h1 class="title__h1__style">Latest News</h1>
+            <p class="title__p__style">There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered alteration.</p>
+        </div>
+        <div class="news__content">
+            <div class="news__items row">
+                <div class="news__item col-lg-4 col-md-6 col-sm-6 col-12">
+                    <div class="news__item__content">
+                        <div class="news__item__bg">
+                            <img src="./Img/blog-01.jpg">
+                        </div>
+                        <div class="news__item__show">
+                            <h4>App Development</h4>
+                            <h3>What is the Difference between Web and Brand.</h3>
+                        </div>
+                        <div class="news__item__hide">
+                            <button class="news__button">Read more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="news__item col-lg-4 col-md-6 col-sm-6 col-12">
+                    <div class="news__item__content">
+                        <div class="news__item__bg">
+                            <img src="./Img/blog-02.jpg">
+                        </div>
+                        <div class="news__item__show">
+                            <h4>React App</h4>
+                            <h3>A big ticket gone to be an interesting look New York.</h3>
+                        </div>
+                        <div class="news__item__hide">
+                            <button class="news__button">Read more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="news__item col-lg-4 col-md-6 col-sm-6 col-12">
+                    <div class="news__item__content">
+                        <div class="news__item__bg">
+                            <img src="./Img/blog-03.jpg">
+                        </div>
+                        <div class="news__item__show">
+                            <h4>Photoshop</h4>
+                            <h3>Getting tickets to the big show have a closer look.</h3>
+                        </div>
+                        <div class="news__item__hide">
+                            <button class="news__button">Read more</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="button__style__2">View More</div>
+    </section>
+
+    <!-- Clients -->
+    <section id="clients">
+        <div class="clients__title">
+            <h3 class="title__h3__style">Our Clients</h3>
+            <h1 class="title__h1__style">Our Clients</h1>
+            <p class="title__p__style">There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered alteration.</p>
+        </div>
+        <div class="clients__content">
+            <ul class="row container">
+                <li class="col-lg-4 col-sm-6 col-12"><img src="./Img/brand-01.png" alt=""></li>
+                <li class="col-lg-4 col-sm-6 col-12"><img src="./Img/brand-02.png" alt=""></li>
+                <li class="col-lg-4 col-sm-6 col-12"><img src="./Img/brand-03.png" alt=""></li>
+                <li class="col-lg-4 col-sm-6 col-12"><img src="./Img/brand-04.png" alt=""></li>
+                <li class="col-lg-4 col-sm-6 col-12"><img src="./Img/brand-05.png" alt=""></li>
+                <li class="col-lg-4 col-sm-6 col-12"><img src="./Img/brand-06.png" alt=""></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer__above row">
+            <div class="col-lg-9 col-12">
+                <p>Enough Talk, Let's Build Something Together</p>
+            </div>
+            <div class="col-lg-3 col-12">
+                <button class="button__style__1">read out now</button>
+            </div>
+        </div>
+        <div class="footer__under row container">
+            <div class="copyright col-lg-4 col-md-6 col-sm-6 col-12 column">
+                <a><img src="./Img/logo-light.png"></a>
+                <p>Copyright © 2021 Imroz React Template. Built with love in Bangladesh All rights reserved.</p>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+                <h4>Quick Link</h4>
+                <ul class="ftu__link">
+                    <li>
+                        <a href="#">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Our Blog</a>
+                    </li>
+                    <li>
+                        <a href="#">Our Team</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+                <h4>Company</h4>
+                <ul class="ftu__link">
+                    <li>
+                        <a href="#">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Our Blog</a>
+                    </li>
+                    <li>
+                        <a href="#">Our Team</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                <h4>Say Hello</h4>
+                <ul class="ftu__link">
+                    <li class="row">
+                        <p>Email:&ensp;</p><a href="#">admin@example.com</a>
+                    </li>
+                    <li class="row">
+                        <p>Email:&ensp;</p><a href="#">hr@example.com</a>
+                    </li>
+                    <li class="row">
+                        <p>Phone:&ensp;</p><a href="#">01957485123</a>
+                    </li>
+                </ul>
+                <div>
+                    <ul class="ftu__icon row">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <a class="backtotop cd-top text-replace js-cd-top" href="#">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
     <!-- Lib & JS -->
     <div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <!-- Bootstrap 4 -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -355,8 +714,10 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
+        <!-- Back to top -->
+        <script src="./Lib/backtotop/util.js"></script>
+        <script src="./Lib/backtotop/main.js"></script>
     </div>
-
 
 </body>
 
