@@ -4,63 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 1vw;
   font-family: "Poppins", sans-serif;
-}
-
-@media screen and (max-width: 992px) {
-  * {
-    font-size: 1.2vw;
-  }
-  .nav.nav__tabs {
-    background-color: rgba(100, 100, 100, 0);
-    background-size: cover;
-    border: 1px solid rgba(0, 0, 0, 0);
-    width: 100%;
-    border-radius: 3rem;
-    padding: -0.3rem 0;
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  * {
-    font-size: 1.5vw;
-  }
-
-  .about__title {
-    margin-top: 3rem;
-  }
-
-  .menu button{
-    transform: translateX(70%);
-  }
-
-  .navbar__button span i{
-    color: rgba(246, 246, 246, 1);
-    font-size: 2rem;
-    margin: 0 auto;
-    transform: translateX(-200%);
-  }
-
-  .intro__control {
-    visibility: hidden;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  * {
-    font-size: 2.25vw;
-  }
-
-  .menu button{
-    transform: translateX(0%);
-  }
-
-  .navbar__button span i{
-    transform: translateX(0%);
-  }
 }
 
 ul {
@@ -102,11 +46,6 @@ a {
   text-align: center;
   margin: 0 auto 1.5rem auto;
 }
-/* -
--
--
--
-- */
 
 /* Button */
 
@@ -152,61 +91,64 @@ a {
   letter-spacing: 0.11rem;
 }
 
-/* -
--
--
--
-- */
-
 /* Header */
 
 header {
   position: absolute;
   width: 100%;
-  z-index: 999;
+  z-index: 2;
 }
 
 .menu {
-  padding: 1rem 3rem;
+  padding: 1.5rem 3rem;
+  justify-content: center;
+  align-items: center;
+  vertical-align: center;
+  flex-wrap: nowrap;
 }
 
 .menu .logo img {
-  width: 60%;
+  width: 40%;
+  margin-left: 3rem;
 }
 
-.menu .menu__options {
+.menu .menu__main .menu__options {
   margin-left: auto;
+  padding-top: 1rem;
 }
 
-.menu .menu__options .option {
+.menu .menu__main .menu__options .option {
   margin: 0 1rem;
   position: relative;
 }
 
-.menu .menu__options .option > a {
+.menu .menu__main .menu__options .option > a {
   color: rgba(255, 255, 255, 1);
   font-weight: 500;
+  font-size: 1.2rem;
+  vertical-align: center;
+  text-decoration: none;
   transition: all 0.5s;
 }
 
-.menu .menu__options .option .sub__list {
+.menu .menu__main .menu__options .option .sub__list {
   list-style: none;
   position: absolute;
   opacity: 0;
   visibility: hidden;
-  top: 150%;
+  top: 200%;
   background-color: rgba(255, 255, 255, 1);
   border-radius: 0.3rem;
   padding: 1rem;
-  width: 14rem;
+  width: 18rem;
   transition: all 0.5s;
   z-index: 2;
 }
 
-.menu .menu__options .option .sub__list > li > a {
+.menu .menu__main .menu__options .option .sub__list > li > a {
   text-decoration: none;
   color: rgba(0, 0, 0, 1);
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 500;
   display: block;
   padding: 0.5rem 1rem;
@@ -214,12 +156,28 @@ header {
   transition: all 0.5s;
 }
 
+.menu .menu__button button {
+  float: right;
+}
+
+/* Popup menu */
+
+#menu__popup {
+  position: absolute;
+  top: 0;
+  display: none;
+  left: -500rem;
+  box-shadow: 0 0 10px 0 rgba(149, 161, 158, 0.7);
+  z-index: 10;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Header Action */
+
 .menu .menu__options .option:hover .sub__list {
   opacity: 1;
   visibility: visible;
 }
-
-/* Header Action */
 
 .menu .menu__options .option > a:hover {
   font-weight: 400;
@@ -231,12 +189,6 @@ header {
   background-color: rgba(253, 71, 102, 0.1);
   color: rgba(253, 71, 102, 1);
 }
-
-/* -
--
--
--
-- */
 
 /* Carousel */
 
@@ -277,7 +229,7 @@ header {
 
 .intro__list .intro__item .intro__caption h1 {
   font-family: "Montserrat", sans-serif;
-  font-size: 4.5rem;
+  font-size: 6.5rem;
   font-weight: 900;
   margin-bottom: 2rem;
 }
@@ -323,12 +275,6 @@ header {
 .intro__control__left > i:hover {
   transform: translateX(1rem);
 }
-
-/* -
--
--
--
-- */
 
 /* Service */
 #service {
@@ -398,12 +344,6 @@ header {
 .service__item__content:hover {
   transform: translateY(-1rem);
 }
-
-/* -
--
--
--
-- */
 
 /* Project */
 
@@ -632,12 +572,6 @@ header {
   border: none;
 }
 
-/* -
--
--
--
-- */
-
 /* Intro */
 
 #intro {
@@ -713,12 +647,6 @@ header {
   filter: drop-shadow(0.1rem 0.1rem 0.2rem rgba(51, 51, 51, 1));
 }
 
-/* -
--
--
--
-- */
-
 /* News */
 
 #news {
@@ -775,27 +703,21 @@ header {
   filter: brightness(100%);
 }
 
-/* -
--
--
--
-- */
-
 /* Clients */
-#clients{
+#clients {
   margin: 5rem 0 0 0;
   padding: 10rem 3rem;
-    background-image: url(../Img/bg-image-3.jpg);
+  background-image: url(../Img/bg-image-3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
 }
 
-.clients__content ul{
+.clients__content ul {
   margin: 5rem auto 0 auto;
 }
 
-.clients__content ul li{
+.clients__content ul li {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -806,7 +728,7 @@ header {
   transition: all 0.5s;
 }
 
-.clients__content ul li img{
+.clients__content ul li img {
   width: 50%;
 }
 
@@ -818,12 +740,6 @@ header {
   border: none;
   border-radius: 0.8rem;
 }
-
-/* -
--
--
--
-- */
 
 /* Footer */
 #footer {
@@ -870,12 +786,7 @@ header {
 }
 
 .footer__under h4 {
-  padding-left: 3rem;
   color: rgba(246, 246, 246, 1);
-}
-
-.footer__under ul {
-  padding-left: 3rem;
 }
 
 .footer__under li {
@@ -940,12 +851,6 @@ header {
   width: 100%;
 }
 
-/* -
--
--
--
-- */
-
 /* Back to top */
 
 .backtotop {
@@ -964,7 +869,7 @@ header {
   font-size: 1.5rem;
   width: 4rem;
   height: 4rem;
-  border-radius:50%;
+  border-radius: 50%;
   line-height: 4rem;
   text-align: center;
   vertical-align: middle;
@@ -980,4 +885,186 @@ header {
 
 .cd-top--fade-out {
   opacity: 1;
+}
+
+@media screen and (min-width: 992px) {
+  /* All */
+
+  * {
+    font-size: 1vw;
+  }
+
+  .menu .navbar__button {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .menu .menu__button {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  /* All */
+  * {
+    font-size: 1.2vw;
+    overflow-x: hidden;
+  }
+
+  /* Header */
+
+  /* Menu main */
+  .menu {
+    position: relative;
+  }
+
+  .menu .menu__options {
+    display: none;
+  }
+
+  .menu .navbar__button {
+    color: rgba(246, 246, 246, 1);
+    font-size: 2rem;
+    opacity: 1;
+    float: left;
+    visibility: visible;
+  }
+
+  .menu .navbar__button i{
+    font-size: 3rem;
+    padding-top: 1rem;
+  }
+
+  .menu__popup__top {
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    margin: 0 auto 3rem auto;
+    flex-wrap: nowrap;
+  }
+
+  .menu__popup__top img {
+    width: 25%;
+  }
+
+  .menu__popup__top .menu__popup__icon i {
+    font-size: 2rem;
+  }
+
+  .menu__popup__content {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 1);
+    width: 30rem;
+    height: 100vh;
+    padding: 2rem;
+    overflow-y: scroll;
+  }
+
+  .menu__popup__content::after{
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 1);
+    z-index: 2;
+  }
+
+  .sidenav .menu__popup__option {
+    padding: 1.5rem 0;
+    border: none;
+    border-bottom: 1px solid rgba(218, 218, 218, 1);
+    background-color: rgba(255, 255, 255, 1);
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .dropdpwn__btn {
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu__popup__option a {
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+  .menu__popup__option i {
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 1);
+    text-align: right;
+    margin-left: auto;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .active {
+    color: rgba(253, 71, 102, 1);
+  }
+
+  .dropdown__container {
+    display: none;
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  .dropdown__container a {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 1rem 3rem;
+  }
+
+  .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+  }
+  
+  /* Carousel */
+
+  .nav.nav__tabs {
+    background-color: rgba(100, 100, 100, 0);
+    background-size: cover;
+    border: 1px solid rgba(0, 0, 0, 0);
+    width: 100%;
+    border-radius: 3rem;
+    padding: -0.3rem 0;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  * {
+    font-size: 1.5vw;
+  }
+
+  .about__title {
+    margin-top: 3rem;
+  }
+
+  .intro__control {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  * {
+    font-size: 2vw;
+  }
+
+  .menu button {
+    transform: translateX(0%);
+  }
+
+  .navbar__button span i {
+    transform: translateX(0%);
+  }
 }

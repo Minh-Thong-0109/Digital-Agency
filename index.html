@@ -39,15 +39,16 @@
 <body>
 
     <!-- Header -->
-    <header id="header">
-        <nav class="menu navbar navbar-expand-md">
+    <header id="header" >
+        <!-- Manu main -->
+        <nav class="menu row">
             <!-- Logo -->
-            <a class="logo navbar-brand" href="#"><img src="./Img/logo.png"></a>
+            <a class="logo col-4" href="#"><img src="./Img/logo.png"></a>
             <!-- Menu options -->
-            <div class="menu collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="menu__options navbar-nav">
-                    <li class="option nav-item">
-                        <a class="nav-link" href="#">Home</a>
+            <div class="menu__main row col-lg-6 col-1">
+                <ul class="menu__options row">
+                    <li class="option">
+                        <a href="#">Home</a>
                         <ul class="sub__list column">
                             <li><a href="">Main Demo</a></li>
                             <li><a href="">Main Demo Dark</a></li>
@@ -68,18 +69,18 @@
                             <li><a href="">Creative Portfolio</a></li>
                         </ul>
                     </li>
-                    <li class="option nav-item">
-                        <a class="nav-link" href="#">Service</a>
+                    <li class="option">
+                        <a href="#">Service</a>
                         <ul class="sub__list column">
                             <li><a href="">Service</a></li>
                             <li><a href="">Service Details</a></li>
                         </ul>
                     </li>
-                    <li class="option nav-item">
-                        <a class="nav-link" href="#">About</a>
+                    <li class="option">
+                        <a href="#">About</a>
                     </li>
-                    <li class="option nav-item">
-                        <a class="nav-link" href="#">Pages</a>
+                    <li class="option">
+                        <a href="#">Pages</a>
                         <ul class="sub__list column">
                             <li><a href="">Blog List</a></li>
                             <li><a href="">Blog Details</a></li>
@@ -90,8 +91,8 @@
                             <li><a href="">404</a></li>
                         </ul>
                     </li>
-                    <li class="option nav-item">
-                        <a class="nav-link" href="#">Blocks</a>
+                    <li class="option">
+                        <a href="#">Blocks</a>
                         <ul class="sub__list column">
                             <li><a href="">Portfolio</a></li>
                             <li><a href="">Team</a></li>
@@ -109,18 +110,104 @@
                             <li><a href="">Button</a></li>
                         </ul>
                     </li>
-                    <li class="option nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                    <li class="option">
+                        <a href="#">Contact</a>
                     </li>
                 </ul>
             </div>
-            <button class="button__style__1">Buy now</button>
+            <div class="menu__button col-lg-2 col-6">
+                <button class="button__style__1">Buy now</button>
+            </div>
             <!-- Toggler/collapsibe Button -->
-            <button class="navbar__button navbar-toggler" type="button" data-toggle="collapse"
-                data-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"><i class="fas fa-list"></i></span>
-            </button>
+            <div id="navbar__button" class="navbar__button col-lg-none col-1">
+                <i class="fas fa-list"></i>
+            </div>
         </nav>
+        <!-- Menu popup -->
+        <div id="menu__popup" class="menu__popup col-lg-none">
+            <div class="menu__popup__content">
+                <div class="menu__popup__top row">
+                    <div class="menu__popup__logo col-10">
+                        <a href="index.html"><img src="./Img/logo-symbol-dark.png" alt=""></a>
+                    </div>
+                    <div id="close__popup" class="menu__popup__icon col-2">
+                        <i class="fas fa-window-close"></i>
+                    </div>
+                </div>
+                <div class="sidenav">
+                    <div class="menu__popup__option dropdown__btn">
+                        <span><a href="#">Home</a></span>
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="menu__popup__option dropdown__container">
+                        <a href="">Main Demo</a>
+                        <a href="">Main Demo Dark</a>
+                        <a href="">Personal Portfolio</a>
+                        <a href="">Interior Landing</a>
+                        <a href="">Portfolio One Page 02</a>
+                        <a href="">Minimal Portfolio</a>
+                        <a href="">Digital Agency</a>
+                        <a href="">Creative Agency</a>
+                        <a href="">Corporate Business</a>
+                        <a href="">Portfolio One Page</a>
+                        <a href="">Creative Agency Landing</a>
+                        <a href="">Business</a>
+                        <a href="">Designer Portfolio</a>
+                        <a href="">Home Particles</a>
+                        <a href="">Studio Agency</a>
+                        <a href="">Startup</a>
+                        <a href="">Creative Portfolio</a>
+                    </div>
+                    <div class="menu__popup__option dropdown__btn">
+                        <a href="#">Service</a>
+                        <i class="fa fa-caret-down"></i> </div>
+                    <div class="menu__popup__option dropdown__container">
+                        <a href="">Service</a>
+                        <a href="">Service Details</a>
+                    </div>
+                    <div class="menu__popup__option">
+                        <a href="about.html">About</a>
+                    </div>
+                    <div class="menu__popup__option dropdown__btn">
+                        <a href="#">Pages</a>
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="menu__popup__option dropdown__container ">
+                        <a href="">Blog List</a>
+                        <a href="">Blog Details</a>
+                        <a href="">Service</a>
+                        <a href="">Service Details</a>
+                        <a href="">Portfolio</a>
+                        <a href="">Portfolio Details</a>
+                        <a href="">404</a>
+                    </div>
+                    <div class="menu__popup__option dropdown__btn">
+                        <a href="#">Blocks</a>
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="menu__popup__option dropdown__container">
+                        <a href="">Portfolio</a>
+                        <a href="">Team</a>
+                        <a href="">Service</a>
+                        <a href="">Video Popup</a>
+                        <a href="">Progressbar</a>
+                        <a href="">Gallery</a>
+                        <a href="">Counters</a>
+                        <a href="">Blog List</a>
+                        <a href="">Clint Logo</a>
+                        <a href="">Contact Form</a>
+                        <a href="">Google Map</a>
+                        <a href="">Columns</a>
+                        <a href="">Pricing Table</a>
+                        <a href="">Button</a>
+                    </div>
+                    <div class="menu__popup__option">
+                        <a href="">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
     </header>
 
     <!-- Carousel -->
@@ -718,6 +805,8 @@
         <!-- Back to top -->
         <script src="./Lib/backtotop/util.js"></script>
         <script src="./Lib/backtotop/main.js"></script>
+        <!-- My JS -->
+        <script src="./index.js"></script>
     </div>
 
 </body>
