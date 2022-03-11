@@ -196,6 +196,7 @@ header {
   position: relative;
   width: 100%;
   height: 120vh;
+  z-index: -1;
 }
 
 .intro__indicators {
@@ -951,6 +952,17 @@ header {
     font-size: 2rem;
   }
 
+  .menu__popup__backdrop{
+    position: fixed;
+    top:0;
+    left:0;
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
   .menu__popup__content {
     position: fixed;
     z-index: 10;
@@ -961,14 +973,6 @@ header {
     height: 100vh;
     padding: 2rem;
     overflow-y: scroll;
-  }
-
-  .menu__popup__content::after{
-    content: "";
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 1);
-    z-index: 2;
   }
 
   .sidenav .menu__popup__option {
